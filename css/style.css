@@ -348,6 +348,6 @@ html{
     height:50vh;
 }
 .icon{
-    position:relative;
+    display:none;
 }
 }
