@@ -326,6 +326,9 @@ nav ul li a:hover {
 .icon{
    display:none;
 }
+    section{
+        min-height: 100vh;
+    }
 header  {
     height:3rem;
 }
