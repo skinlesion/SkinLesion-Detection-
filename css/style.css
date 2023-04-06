@@ -334,7 +334,7 @@ html{
        left:-100%;
        top:6rem; Background:rgba(255,255,255,0.4);
         width:100%;
-        height:36vh;
+        height:28vh;
         Text-align:center;
         Backdrop-filter:blur(2rem);
         transition:0.5s ease-in-out;
@@ -345,7 +345,7 @@ html{
 }
 .col-2 img {
     width: 100%;
-    height:50%;
+    height:50vh;
 }
 .icon{
     position:relative;
