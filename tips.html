@@ -1,12 +1,20 @@
-<html><body><section class="tips-container">
+<htm|><body><section class="tips-container">
   <h1 class="top-heading">General Tips</h1>
   <div class="tp-wrapper">
-    <div class="tp-box" onclick="toggleFlip(this)">
-      <div class="tp-box__side tp-box__front">Click me to reveal</div>
-      <div class="tp-box__side tp-box__back">
-        <p class="tips-cont"></p>
-      </div>
-    </div>
+    
+
+    1.Wash up. Bathe in warm—not hot—water; use mild cleansers that don’t irritate; and wash gently—don’t scrub.
+    2.Block sun damage. Avoid intense sun exposure, use sunscreen, and wear protective clothing.
+    3.Don’t use tanning beds or sunlamps. They emit the same harmful UV radiation as the sun.
+    4.Avoid dry skin. Drink plenty of water, and use gentle moisturizers, lotions, or creams.
+    5.Reduce stress. Stress can harm your skin and other body systems.
+    6.Get enough sleep. Experts recommend about 9 hours a night for teens and 7-8 hours for adults.
+    7.Speak up. Talk to your doctor if you notice any odd changes to your skin, like a rash or mole that changes size or color.
+    8.Use a safe, mineral-based sunscreen daily.
+    9.Take care of your gut. Research shows that underlying gut health issues can manifest on the skin in many ways, from acne to eczema.
+
+
+
   </div>
 </section>
 </body>
@@ -19,60 +27,13 @@ body{
   perspective: 800px;
 }
 
-.tp-box {
-  position: relative;
-  width: 320px;
-  height: 500px;
-  margin: 3rem auto;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-}
 
-.tp-box__side {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  color: #fff;
-  text-align: center;
-  line-height: 40px;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-  user-select: none;
-}
 
-.tp-box__front {
-  background-image: linear-gradient(to bottom right, #47bdfd, #9953da);
-  transform: rotateY(0deg);
-}
+
+
 
 .tips-cont {
   padding: 15px;
-}
-
-.tp-box__back {
-  background: #23262d;
-  transform: rotateY(-180deg);
-}
-
-.top-heading {
-  font-size: 2rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.flip {
-  transform: rotateY(180deg);
-}
-@media only screen and (min-width:800px) {
-            .tp-box {
-                width:70%;
-            }
 }
 
 
@@ -80,39 +41,3 @@ body{
 </style>
 
 
-<script>
-
-
-function toggleFlip(card) {
-  const tips = [
-    "Wash up. Bathe in warm—not hot—water; use mild cleansers that don’t irritate; and wash gently—don’t scrub",
-    "Block sun damage. Avoid intense sun exposure, use sunscreen, and wear protective clothing",
-    "Don’t use tanning beds or sunlamps. They emit the same harmful UV radiation as the sun.",
-    "Avoid dry skin. Drink plenty of water, and use gentle moisturizers, lotions, or creams.",
-    "Reduce stress. Stress can harm your skin and other body systems.",
-    "Get enough sleep. Experts recommend about 9 hours a night for teens and 7-8 hours for adults.",
-    "Speak up. Talk to your doctor if you notice any odd changes to your skin, like a rash or mole that changes size or color.",
-    "Use a safe, mineral-based sunscreen daily",
-    "Take care of your gut. Research shows that underlying gut health issues can manifest on the skin in many ways, from acne to eczema.",
-  ];
-
-  if (card.classList.contains("flip")) {
-    card.classList.remove("flip");
-    const tipContainer = card.querySelector(".tips-cont");
-    tipContainer.innerHTML = "";
-  } else {
-    const randomIndex = Math.floor(Math.random() * tips.length);
-    const randomTip = tips[randomIndex];
-    card.classList.add("flip");
-    const tipContainer = card.querySelector(".tips-cont");
-    tipContainer.innerHTML = randomTip;
-  }
-
-  if (event.target.classList.contains("tp-box__back")) {
-    return;
-  }
-}
-
-
-
-</script>
